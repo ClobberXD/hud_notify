@@ -1,0 +1,3 @@
+Shows a message to a player in-game, by means of a formspec.
+
+Syntax: /notify <player_name> <msg>
