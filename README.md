@@ -11,4 +11,5 @@ notify is a very simple mod that comprises of just one command `/notify`, which 
 ![screenshot](https://raw.githubusercontent.com/ClobberXD/notify/master/screenshot.png)
 
 ### TODO
+- [ ] Re-Implement using HUD element to get rid of it's [disadvantages](https://forum.minetest.net/viewtopic.php?p=317428#p317428)
 - [ ] Add automatic line-break mid-message if msg too long
