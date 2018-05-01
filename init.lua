@@ -52,7 +52,7 @@ minetest.register_chatcommand("notify", {
 		local duration = tonumber(minetest.settings:get(setting))
 		if not duration then
 			duration = 10
-			minetest.setting_set(setting, "10")
+			minetest.settings:set(setting, "10")
 		end
 		
 		minetest.after(duration, function()
