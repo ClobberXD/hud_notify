@@ -12,6 +12,7 @@ notify is a very simple mod that comprises of just one command `/notify`, which 
 
 ### minetest.conf
 - `notify.hud_duration`
+
 Stores a numeric value (10 by default) which represents the duration of the message visibility in seconds.
 
 ### Screenshot
