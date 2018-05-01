@@ -5,6 +5,8 @@
 -- Restricted to only moderators, due to the potential for abuse
 --
 
+local setting = "notify.hud_duration"
+
 minetest.register_chatcommand("notify", {
 	params = "<player_name> <message>",
 	description = "Shows a message to player using HUD elements. e.g. /notify LegendaryGriefer Stop griefing or face a ban!",
@@ -47,7 +49,13 @@ minetest.register_chatcommand("notify", {
 			text = msg
 		})
 		
-		minetest.after(10, function()
+		local duration = tonumber(minetest.settings:get(setting))
+		if not duration then
+			duration = 10
+			minetest.setting_set(setting, "10")
+		end
+		
+		minetest.after(duration, function()
 			player:hud_remove(hud_bg)
 			player:hud_remove(hud_header)
 			player:hud_remove(hud_msg)
