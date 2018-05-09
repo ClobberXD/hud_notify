@@ -1,11 +1,11 @@
 --
 -- /notify <player> <message>
 --
--- Sends a PM to an online player via HUD elements
+-- Sends a PM to an online player using HUD elements
 -- Restricted to only moderators, due to the potential for abuse
 --
 
-local setting = "notify.hud_duration"
+local setting = "hud_notify.duration"
 
 minetest.register_chatcommand("notify", {
 	params = "<player_name> <message>",
@@ -30,7 +30,7 @@ minetest.register_chatcommand("notify", {
 			offset = {x = 50, y = 300},
 			scale = {x = -30, y = -30},
 			alignment = {x = 1, y = 0},
-			text = "notify_bg.png"
+			text = "hud_notify_bg.png"
 		})
 		local hud_header = player:hud_add({
 			hud_elem_type = "text",

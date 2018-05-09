@@ -1,2 +1,2 @@
 #Custom duration of notification
-notify.hud_duration (HUD duration) int 10
+hud_notify.duration (HUD duration) int 10
