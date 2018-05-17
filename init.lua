@@ -56,9 +56,12 @@ minetest.register_chatcommand("notify", {
 		end
 		
 		minetest.after(duration, function()
-			player:hud_remove(hud_bg)
-			player:hud_remove(hud_header)
-			player:hud_remove(hud_msg)
+			local player = minetest.get_player_by_name(player_name)
+			if player then
+				player:hud_remove(hud_bg)
+				player:hud_remove(hud_header)
+				player:hud_remove(hud_msg)
+			end
 		end)
 	end
 })
