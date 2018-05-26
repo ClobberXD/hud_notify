@@ -20,7 +20,6 @@ minetest.register_chatcommand("notify", {
 		if not core.get_player_by_name(player_name) then
 			return false, "The player " ..player_name.. " is not online."
 		end
-		local msg_header = "Notification from " ..name.. ": "
 		minetest.chat_send_player(name, "Notification sent to " ..player_name.. ": \"" ..msg.. "\"")
 		
 		local player = minetest.get_player_by_name(player_name)
@@ -32,18 +31,10 @@ minetest.register_chatcommand("notify", {
 			alignment = {x = 1, y = 0},
 			text = "hud_notify_bg.png"
 		})
-		local hud_header = player:hud_add({
-			hud_elem_type = "text",
-			position = {x = 0, y = 0},
-			offset = {x = 70, y = 200},
-			alignment = {x = 1, y = 0},
-			number = 0x3399FF,
-			text = msg_header
-		})
 		local hud_msg = player:hud_add({
 			hud_elem_type = "text",
 			position = {x = 0, y = 0},
-			offset = {x = 70, y = 250},
+			offset = {x = 70, y = 210},
 			alignment = {x = 1, y = 0},
 			number = 0xFFFFFF,
 			text = msg
@@ -59,7 +50,6 @@ minetest.register_chatcommand("notify", {
 			local player = minetest.get_player_by_name(player_name)
 			if player then
 				player:hud_remove(hud_bg)
-				player:hud_remove(hud_header)
 				player:hud_remove(hud_msg)
 			end
 		end)
