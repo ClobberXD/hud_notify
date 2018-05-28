@@ -21,3 +21,4 @@ Stores a numeric value (10 by default) which represents the duration of the mess
 ### TODO
 - [x] Re-Implement using HUD element to get rid of it's [disadvantages](https://forum.minetest.net/viewtopic.php?p=317428#p317428). (Fixed with [3e34a4b](https://github.com/ClobberXD/hud_notify/commit/3e34a4b7ce640f8e739979c472be47a3a352fae0))
 - [ ] Add automatic line-break if `msg` too long.
+- [ ] Implement global notification functionality.
