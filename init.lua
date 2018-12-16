@@ -62,10 +62,14 @@ local function update()
 	for name, hud in pairs(players) do
 		if hud and os.time() > hud.time then
 			local player = minetest.get_player_by_name(name)
-			player:hud_remove(hud.bg)
-			player:hud_remove(hud.msg)
-			if not hide_sender then
-				player:hud_remove(hud.header)
+			if player then
+				player:hud_remove(hud.bg)
+				player:hud_remove(hud.msg)
+				if not hide_sender then
+					player:hud_remove(hud.header)
+				end
+			else
+				print("player " .. name .. " not connected anymore")
 			end
 
 			players[name] = nil
