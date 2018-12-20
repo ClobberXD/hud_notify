@@ -68,8 +68,6 @@ local function update()
 				if not hide_sender then
 					player:hud_remove(hud.header)
 				end
-			else
-				print("player " .. name .. " not connected anymore")
 			end
 
 			players[name] = nil
